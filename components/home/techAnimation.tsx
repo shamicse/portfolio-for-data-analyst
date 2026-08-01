@@ -31,7 +31,7 @@ const ReviewCard = ({ img, name }: { img: string; name: string }) => {
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-md w-6 h-6 object-contain" alt={name} src={img} />
+        <Image src={img} alt={name} width={24} height={24} />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
