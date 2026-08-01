@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
-import { siteConfig } from "@/data/data";
+
 
 export const Navbar = () => {
   const router = useRouter();
