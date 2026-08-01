@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { siteConfig } from "@/data/data";
 
 type SpotifyTrackPayload = {
   title: string;
@@ -51,7 +52,23 @@ export const MusicCard = () => {
     return Math.min(100, (current / total) * 100);
   }, [data, elapsed]);
 
-  if (!data) return null;
+  const fallbackEmbed = (
+    <div className="mt-8 w-full max-w-[480px] rounded-2xl border border-zinc-200/50 bg-white/70 p-3 shadow-sm backdrop-blur-xl dark:border-zinc-800/50 dark:bg-zinc-900/70">
+      <iframe
+        src={`https://open.spotify.com/embed/user/${siteConfig.spotifyUserId}/playlist/37i9dQZF1DXcBWIGoYBM5M`}
+        width="100%"
+        height="130"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      />
+      <p className="mt-2 text-sm">
+        Spotify panel displayed as an embed fallback for static hosts.
+      </p>
+    </div>
+  );
+
+  if (!data) return fallbackEmbed;
 
   return (
     <div className="mt-8 group relative z-0 flex w-full max-w-[480px] items-center gap-3 overflow-hidden rounded-2xl border border-zinc-200/50 bg-white/70 p-3 shadow-sm backdrop-blur-xl transition-all sm:gap-4 sm:p-4 dark:border-zinc-800/50 dark:bg-zinc-900/70">
