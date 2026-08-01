@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import { siteConfig, socialLinks } from "@/data/data";
 
+export const dynamic = "force-static";
+export const revalidate = 900;
+
 type SpotifyApiTrack = {
   name: string;
   artists: { name: string }[];
