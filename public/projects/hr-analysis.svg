@@ -1,0 +1,11 @@
+﻿<svg xmlns='http://www.w3.org/2000/svg' width='800' height='500' viewBox='0 0 800 500'>
+  <defs>
+    <linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'>
+      <stop offset='0%' stop-color='#7c3aed' stop-opacity='0.95'/>
+      <stop offset='100%' stop-color='#0f172a' stop-opacity='0.95'/>
+    </linearGradient>
+  </defs>
+  <rect width='800' height='500' fill='url(#g)'/>
+  <text x='50%' y='48%' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='Arial,sans-serif' font-size='42' font-weight='700'>HR Attrition</text>
+  <text x='50%' y='58%' dominant-baseline='middle' text-anchor='middle' fill='rgba(255,255,255,0.75)' font-family='Arial,sans-serif' font-size='20'>Data Analysis Project</text>
+</svg>
