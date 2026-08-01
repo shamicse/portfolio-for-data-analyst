@@ -8,6 +8,7 @@ import ShimmerButton from "../ui/shimmer-button";
 import { Slide } from "../ui/slide";
 import Link from "next/link";
 import { siteConfig, socialLinks } from "@/data/data";
+import { MusicCard } from "./musicCard";
 
 export const BioSection = () => {
   return (
@@ -72,7 +73,7 @@ export const BioSection = () => {
           </Slide>
         </div>
       </div>
-      <div className="flex flex-col gap-8 items-center md:mt-28">
+      <div className="flex flex-col gap-8 items-center md:mt-28 w-full">
         <Slide delay={0.05}>
           <Image
             src="/profile.png"
@@ -91,16 +92,10 @@ export const BioSection = () => {
             Shami Akhtar
           </TypingAnimation>
         </Slide>
-        <Slide delay={0.2}>
-          <ShimmerButton
-            href={siteConfig.resumePath}
-            className="shadow-xl px-10 py-4"
-            borderRadius="10px"
-          >
-            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg font-ubuntu">
-              Download Resume
-            </span>
-          </ShimmerButton>
+        <Slide delay={0.2} className="w-full flex justify-center">
+          <div className="w-full max-w-[480px]">
+            <MusicCard />
+          </div>
         </Slide>
       </div>
     </section>

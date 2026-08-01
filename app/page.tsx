@@ -19,7 +19,9 @@ export default function Home() {
       <ScrollProgress />
       <BioSection />
       <Slide delay={0.3} className="w-full flex justify-center">
-        <MusicCard />
+        <div className="w-full max-w-[480px]">
+          <MusicCard />
+        </div>
       </Slide>
       <Technologies />
       <Slide delay={0.3}>
