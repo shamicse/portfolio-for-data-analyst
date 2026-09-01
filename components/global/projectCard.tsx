@@ -16,7 +16,7 @@ export const ProjectCard = ({ title, desc, technologies, previewLink, githubLink
     return (
         <Slide delay={.18} className="flex flex-col md:mx-10  dark:bg-[#141414] bg-slate-50 shadow-lg hover:scale-105 transition-transform  rounded-lg  ">
             <div className="relative w-full h-48 md:h-72">
-                <Image src={imgLink} fill alt="" className="rounded-t-md " />
+                <Image src={imgLink} fill alt={`${title} project thumbnail`} className="rounded-t-md object-cover object-top" />
             </div>
             <div className="p-4 md:p-5 flex flex-col gap-2 ">
                 <h1 className="dark:text-zinc-100 text-zinc-950  md:text-xl">{title}</h1>
@@ -26,7 +26,7 @@ export const ProjectCard = ({ title, desc, technologies, previewLink, githubLink
                 <div className="flex justify-center gap-10 mt-2">
                     {previewLink && <Button className="border-2 dark:border-white border-black " variant="secondary" onClick={() => {
                         window.open(previewLink, "_blank", "noopener,noreferrer")
-                    }}>Preview</Button>}
+                    }}>Live Dashboard</Button>}
                     {githubLink && (<Button className="" variant={"default"}
                         onClick={() => {
                             window.open(githubLink, "_blank", "noopener,noreferrer")
